@@ -1,5 +1,6 @@
 # 쓰레기 분류 프로그램 기획
-![image](https://user-images.githubusercontent.com/86215536/142167892-de99dd59-72b8-497b-a86c-0bd0e9efb8c6.png)
+![image](https://user-images.githubusercontent.com/86215536/142168859-ae821813-bc87-4062-a44f-0a5fea34a0a8.png)
+
 
 
 ![image](https://user-images.githubusercontent.com/86215536/142167940-b76ad735-d130-4bb5-bc35-b1d834a9232f.png)
@@ -23,9 +24,13 @@
 
 ### 제작방법, YOLO & BERT 이용
 - YOLO
+
+
 ![image](https://user-images.githubusercontent.com/86215536/142168623-ebf9a634-7908-455c-acb3-4f5fa59c9360.png)
 
 - BERT
+
+
 ![image](https://user-images.githubusercontent.com/86215536/142168571-4da5b9b5-281a-4934-a27d-8b76fcadd70f.png)
 
 ## 03. 서비스 제작계획
