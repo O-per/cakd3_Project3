@@ -1,10 +1,12 @@
 # 쓰레기 분류 프로그램 기획
+![image](https://user-images.githubusercontent.com/86215536/142167892-de99dd59-72b8-497b-a86c-0bd0e9efb8c6.png)
 
-![image](https://user-images.githubusercontent.com/86215536/142161883-f630f7b2-606b-4712-8872-5c7e701e40a5.png)
+
+![image](https://user-images.githubusercontent.com/86215536/142167940-b76ad735-d130-4bb5-bc35-b1d834a9232f.png)
 
 ## 01. 서비스 기획 및 시나리오
 ### 문제 인식
-![image](https://user-images.githubusercontent.com/86215536/142167169-4ef9cffa-5ac6-4b88-a3aa-ea746305ae14.png)
+![image](https://user-images.githubusercontent.com/86215536/142168154-6293d6c5-3053-4a16-8fec-200cdcfe0245.png)
 
 
 ### 프로젝트 기대 가치
@@ -13,18 +15,18 @@
 3) 기업의 생산방식 변경 : 사용자의 인식개선에 따라 기업의 생산방식도 재활용이 편리한 방향으로 바뀌는 선순환이 이루어진다.
 
 ### 프로젝트 목표
-![image](https://user-images.githubusercontent.com/86215536/142162227-5ffab1f5-5390-4b0b-9adc-3929c192aaeb.png)
+![image](https://user-images.githubusercontent.com/86215536/142168350-a173b18a-80a6-4215-ac04-8e8f91d3d234.png)
 
 ## 02. 데이터 수집 밎 제작방법
 ### 수집계획, ai허브 데이터 이용
-![image](https://user-images.githubusercontent.com/86215536/142162414-e6d58730-d235-4f90-806f-834d31005ac0.png)
+![image](https://user-images.githubusercontent.com/86215536/142168451-de0a9a9c-e33e-40d5-872c-4a255da0e572.png)
 
 ### 제작방법, YOLO & BERT 이용
 - YOLO
-![image](https://user-images.githubusercontent.com/86215536/142167227-6c435e9b-8e6b-4596-8199-31b01b965fed.png)
+![image](https://user-images.githubusercontent.com/86215536/142168623-ebf9a634-7908-455c-acb3-4f5fa59c9360.png)
 
 - BERT
-![image](https://user-images.githubusercontent.com/86215536/142167302-2554b6aa-51b8-4e74-a578-d298502c16c7.png)
+![image](https://user-images.githubusercontent.com/86215536/142168571-4da5b9b5-281a-4934-a27d-8b76fcadd70f.png)
 
 ## 03. 서비스 제작계획
 ### 사용자 중심 서비스 어플 구현
