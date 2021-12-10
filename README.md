@@ -12,8 +12,10 @@
 <strong> - 시연영상 </strong>
 
 
-![1](https://user-images.githubusercontent.com/86215536/145540307-21d3fff8-ee8e-4a79-85e9-92524a5f0b97.gif)
+![1](https://user-images.githubusercontent.com/86215536/145540665-3ae87ab5-fb6e-4332-8b95-7d1252b0397e.gif)
+
+
 
  <br>
 
-![3](https://user-images.githubusercontent.com/86215536/145540318-57ffc9e4-f35b-4053-a79f-f32fb5b8400b.gif)
+
