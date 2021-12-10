@@ -1,0 +1,1 @@
+{"eos_token": "</s>", "unk_token": "<unk>", "pad_token": "<pad>", "extra_ids": 0, "additional_special_tokens": null, "sp_model_kwargs": {}, "special_tokens_map_file": null, "tokenizer_file": null, "name_or_path": "/content/drive/MyDrive/cakd3_team3/Datasets/chl1/outputs/outputs/outputs/outputs/outputs/model_files", "tokenizer_class": "T5Tokenizer"}
