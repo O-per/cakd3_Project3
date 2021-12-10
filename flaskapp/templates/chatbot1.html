@@ -1,0 +1,15 @@
+{% extends "chatbot.html" %}
+
+{% block contents %}
+        <div class="input_box">
+            <label for="user_text"> 이전으로 돌아가려면 <strong>'뒤로가기'</strong>를 눌러주세요.</label><br>
+            <textarea style="margin: 10px; font-size: 20px;resize: none;width:957px;height:108px" readonly disabled="disabled">{{ user_text }}
+            </textarea>
+            <div style="padding-left:690;" id="cnt">({{ user_text_len }} / 200)</div>
+        </div>
+
+        <div class="ai_data_box" id="ai_box">
+            기계 요약본 : {{ ai_data }} 
+            <!-- ai_data -->
+        </div>
+{% endblock %}

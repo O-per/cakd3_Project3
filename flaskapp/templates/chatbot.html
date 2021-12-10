@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang='ko'>
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <meta nsme="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../static/css/chatbot.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="stopwatch.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="v14_476">
+        <div class="v14_477">
+            <div class="icon">
+            </div>
+            {% if num==1 %}
+            <div class="box_under" style="left: 180px;">
+            </div>
+            {% endif %}
+            <div class="box1">
+                <div class="box1_1">
+                    <a href="{{ url_for('summary_num', num=1) }}">
+                        <span class="box1_2">기술 과학(Restart)</span>
+                    </a>
+                </div>
+            </div>
+            {% if num==2 %}
+            <div class="box_under" style="left: 380px;">
+            </div>
+            {% endif %}
+            <div class="box2">
+                <div class="box1_1">
+                    <a href="{{ url_for('summary_num', num=2) }}">
+                        <span class="box1_2">사회 과학(Restart)</span>
+                    </a>
+                </div>
+            </div>
+            {% if num==3 %}
+            <div class="box_under" style="left: 580px;">
+            </div>
+            {% endif %}
+            <div class="box3">
+                <div class="box1_1">
+                    <a href="{{ url_for('summary_num', num=3) }}">
+                        <span class="box1_2"> 예술<br>(Restart) </span>
+                    </a>
+                </div>
+            </div>
+            {% if num==4 %}
+            <div class="box_under" style="left: 780px;">
+            </div>
+            {% endif %}
+            <div class="box4">
+                <div class="box1_1">
+                    <a href="{{ url_for('summary_num', num=4) }}">
+                        <span class="box1_2"> 융합<br>(Restart) </span>
+                    </a>
+                </div>
+            </div>
+
+            {% if num==5 %}
+            <div class="box_under" style="  width: 100px; left: 984px;">
+            </div>
+            {% endif %}
+            <div class="up_box">
+                <div class="box5_1">
+                    <a href="{{ url_for('summary_num', num=5) }}">
+                        <span class="box5_2"> 심화 </span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="box_data" id="data_text">{{ data_text }}
+            </div>
+
+            {% block contents %}
+            <script>
+                var time = 0;
+                var starFlag = true;
+                $(document).ready(function () {
+                    buttonEvt();
+                });
+
+                function init() {
+                    document.getElementById("time").innerHTML = "00:00:00";
+                }
+
+                function buttonEvt() {
+                    var hour = 0;
+                    var min = 0;
+                    var sec = 0;
+                    var timer;
+
+                    // start btn
+                    $("#startbtn").click(function () {
+
+                        if (starFlag) {
+                            $(".fa").css("color", "#fcfae6")
+                            this.style.color = "#4C4C4C";
+                            starFlag = false;
+
+                            if (time == 0) {
+                                init();
+                            }
+
+                            timer = setInterval(function () {
+                                time++;
+
+                                min = Math.floor(time / 60);
+                                hour = Math.floor(min / 60);
+                                sec = time % 60;
+                                min = min % 60;
+
+                                var th = hour;
+                                var tm = min;
+                                var ts = sec;
+                                if (th < 10) {
+                                    th = "0" + hour;
+                                }
+                                if (tm < 10) {
+                                    tm = "0" + min;
+                                }
+                                if (ts < 10) {
+                                    ts = "0" + sec;
+                                }
+
+                                document.getElementById("time").innerHTML = th + ":" + tm + ":" + ts;
+                            }, 1000);
+                        }
+                    });
+
+                    // pause btn
+                    $("#pausebtn").click(function () {
+                        if (time != 0) {
+                            $(".fa").css("color", "#fcfae6")
+                            this.style.color = "#4C4C4C";
+                            clearInterval(timer);
+                            starFlag = true;
+                        }
+                    });
+
+                    // stop btn
+                    $("#stopbtn").click(function () {
+                        if (time != 0) {
+                            $(".fa").css("color", "#fcfae6")
+                            this.style.color = "#4C4C4C";
+                            clearInterval(timer);
+                            starFlag = true;
+                            time = 0;
+                            init();
+                        }
+                    });
+                }
+            </script>
+
+            <div class="input_box">
+                <div class="countdown" style="top: 43px;">
+                    Timer
+                </div>
+
+                <div class="countdown">
+                    <div id="time" class="time"> 00:00:00 </div>
+                </div>
+                <div class="button" style="background: rgb(252,221,115,1); width: 145px; height: 45px; top: 122px; left: 845px; padding: 5px;">
+                    <div class="btnBox">
+                        <i id="startbtn" class="fa fa-play fa-2x" aria-hidden="false" style="margin: 2px;"></i>
+                        <i id="pausebtn" class="fa fa-pause fa-2x" aria-hidden="false" style="margin: 2px;"></i>
+                        <i id="stopbtn" class="fa fa-stop fa-2x" aria-hidden="false" style="margin: 3px;"></i>
+                    </div>
+                </div>
+
+                <form action="{{ url_for('summary1') }}" method="post" id="text_Form">
+                    <label for="user_text"><span style="padding: 20px">본 텍스트의 요약문을 입력 후 <strong>'제출'</strong>버튼을
+                            눌러주세요.</span></label>
+                    <textarea id="user_text" name="user_text_text"
+                        style="margin: 10px; font-size: 20px;resize: none;width:824px;height:108px"
+                        placeholder="최소 60자 최대 200자 이내로 작성해주세요." required></textarea>
+                    <div style="padding-left: 12px;" id="cnt"> (0 / 200) </div>
+
+                    <button class="button" style="width: 60px" id="button1" form="text_Form"
+                        type="button"> 제출 </button>
+                    <button class="button" style="left: 762px;" id="reset_btn" form="text_Form" type="reset"
+                        style="display : none;">다시쓰기</button>
+
+
+                    <script>
+                        $(document).ready(function () {
+                            $('#user_text').on('keyup', function () {
+                                $('#startbtn').click();
+                                $("#reset_btn").attr("disabled", false);
+                                $('#cnt').html("(" + $(this).val().length + " / 200)");
+
+                                if ($(this).val().length > 200) {
+                                    alert("최대 200자까지 입력 가능합니다.")
+                                    $(this).val($(this).val().substring(0, 200));
+                                    $('#cnt').html("(200 / 200)");
+                                }
+
+                                if ($("#button1").prop("disabled") == true) {
+                                    $("#button1").attr("disabled", false);
+                                }
+                            });
+                        });
+                    </script>
+
+                    <script>
+                        user_text = $("textarea#user_text").val();
+
+                    </script>
+
+
+                    <script>
+                        $(function () {
+                            $('#button1').click(function () {
+                                $('#stopbtn').click();
+                                if ($("#user_text").val().length > 60) {
+                                    $('#ai_box').show();
+                                    $('#text_Form').submit();
+                                    $(this).css("background", "red");
+                                    if ($("#ai_box").css("display") == "none") {
+                                        $('#ai_box').show();
+                                        // $("#button1").submit();
+                                    }
+                                    if ($("#button1").prop("disabled") == false) {
+                                        $("#button1").attr("disabled", true);
+                                    }
+                                    $("#reset_btn").attr("disabled", true);
+                                    $('#user_text').attr("disabled", true);
+                                    $('#stopbtn').click();
+                                } else {
+                                    alert("60자 이상 입력하세요");
+                                    
+                                }
+                            })
+                        })
+                    </script>
+                </form>
+
+                <script>
+                    $(function () {
+                        $('#reset_btn').click(function () {
+                            if ($("#button1").prop("disabled") == true) {
+                                $("#button1").attr("disabled", false);
+                            }
+                            $('#user_text').attr("disabled", false)
+                            $('#button1').css("background", "rgba(55,55,112,1")
+                            $('#ai_box').hide()
+                        })
+                    })
+
+                </script>
+
+            </div>
+
+
+            <div class="ai_data_box" id="ai_box" style="display : none;opacity: 1;" text-align="center">
+                <!-- <i class="fa fa-spinner fa-pulse fa-3x fa-fw margin-bottom" style="width: 995px;height: 80px;"></i> -->
+                제출 후 잠시만 기다려 주세요.  <div class="loadding" ></div>
+            </div>
+
+            <div class="ai_data_box" id="ai_box2" style="opacity: 0.2;">
+            </div>
+
+
+            {% endblock %}
+            <div class="great_box" style="text-align:center">
+                {% if score_text == None %}
+                <strong>No data</strong>
+                {% else %}
+                <strong> {{ score_text }} </strong>
+                {% endif %}
+
+            </div>
+
+        </div>
+
+        <div class="v231_132">
+            <div class="name">
+
+            </div>
+            <span class="v231_136">ver 2021.11.25</span>
+            <div class="v231_137">
+                <a href="{{ url_for('settings') }}">
+                    <span class="v231_138">Settings</span>
+                    <div class="v231_139">
+                </a>
+
+            </div>
+        </div>
+        <div class="v231_140">
+            <a href="{{ url_for('user') }}">
+                <span class="v231_141">User</span>
+                <div class="v231_142">
+            </a>
+
+        </div>
+    </div>
+    <div class="v231_143">
+        <a href="{{ url_for('summary_num',num=1) }}">
+            <span class="v231_144">Summary</span>
+            <div class="v231_155">
+        </a>
+
+    </div>
+    </div>
+    <div class="v231_146">
+        <a href="{{ url_for('topic') }}">
+            <span class="v231_147">Topic</span>
+            <div class="v231_148">
+        </a>
+
+    </div>
+    </div>
+    <div class="v231_149">
+        <a href="{{ url_for('main') }}">
+            <span class="v231_150">Main</span>
+            <div class="v231_153">
+        </a>
+
+    </div>
+    </div>
+    <div class="v231_152">
+
+    </div>
+    </div>
+    </div>
+</body>
+
+</html>
