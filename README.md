@@ -9,10 +9,8 @@
 ![4](https://user-images.githubusercontent.com/86215536/145538415-cb151969-21a8-4b71-a299-c824e3f3cd62.jpg)
 
 
-<strong> - 시연영상 </strong>
+[<strong> - 시연영상 </strong>](https://github.com/O-per/cakd3_Project3/blob/main/_video.md)
 
-
-![1](https://user-images.githubusercontent.com/86215536/145540665-3ae87ab5-fb6e-4332-8b95-7d1252b0397e.gif)
 
 
 
