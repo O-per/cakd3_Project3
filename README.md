@@ -1,8 +1,12 @@
 # For Better Essay :books:
-#  한국어 도서 말뭉치를 활용한 인공지능 서비스, 문해력 향상 프로그램 
+#  한국어 도서 말뭉치 활용한 인공지능 서비스, 문해력 향상 프로그램 
    
- <br>
-   
+### 공모전 최우수상(1등) 수상
+
+![공모전](https://user-images.githubusercontent.com/92708600/150311483-d6026347-6c67-458c-a7bb-aaf4fda0eeb9.jpg)
+![최우수상1](https://user-images.githubusercontent.com/92708600/150310714-e6863c95-3bb7-429b-a4a5-5eb9e25385c5.jpg)
+ 
+
 ## 결과 / [Result] 
 
 
